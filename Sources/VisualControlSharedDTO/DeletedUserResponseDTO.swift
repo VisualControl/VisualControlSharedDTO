@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DeletedUserDTO: Codable, @unchecked Sendable {
+public struct DeletedUserResponseDTO: Codable, @unchecked Sendable {
     
     public let error: Bool
     public var reason: String?
