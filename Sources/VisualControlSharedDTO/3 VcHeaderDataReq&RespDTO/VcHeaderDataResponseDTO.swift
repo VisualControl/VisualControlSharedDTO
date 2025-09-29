@@ -9,6 +9,7 @@ import Foundation
 
 public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
     
+    public let id: UUID
     public let knxMainGroup: Int
     public let dateReceive: Bool
     public let timeReceive: Bool
@@ -46,7 +47,8 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
     public let stateHailReceive: Bool
     public let dateAndTimeSend: Bool
     
-    public init(knxMainGroup: Int,
+    public init(id: UUID,
+                knxMainGroup: Int,
                 dateReceive: Bool,
                 timeReceive: Bool,
                 qtyWindSpeedReceive: Int,
@@ -85,6 +87,7 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
     )
     
     {
+        self.id = id
         self.knxMainGroup = knxMainGroup
         self.dateReceive = dateReceive
         self.timeReceive = timeReceive
@@ -122,6 +125,5 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
         self.stateHailReceive = stateHailReceive
         self.dateAndTimeSend = dateAndTimeSend
     }
-    
     
 }

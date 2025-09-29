@@ -9,7 +9,6 @@ import Foundation
 
 public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
     
-    public let id: UUID
     public let knxMainGroup: Int
     public let dateReceive: Bool
     public let timeReceive: Bool
@@ -47,8 +46,7 @@ public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
     public let stateHailReceive: Bool
     public let dateAndTimeSend: Bool
     
-    public init(id: UUID,
-                knxMainGroup: Int,
+    public init(knxMainGroup: Int,
                 dateReceive: Bool,
                 timeReceive: Bool,
                 qtyWindSpeedReceive: Int,
@@ -87,7 +85,6 @@ public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
     )
     
     {
-        self.id = id
         self.knxMainGroup = knxMainGroup
         self.dateReceive = dateReceive
         self.timeReceive = timeReceive
