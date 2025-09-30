@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class AuthorizedUser {
+public struct AuthorizedUser {
     
-    let authUsereName: String
+    public let authUsereName: String
     
-    init(authUsereName: String) {
+    public init(authUsereName: String) {
         self.authUsereName = authUsereName
     }
 }
