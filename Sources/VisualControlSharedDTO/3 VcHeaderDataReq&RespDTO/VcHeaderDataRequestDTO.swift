@@ -10,7 +10,7 @@ import Foundation
 public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
     
     public let knxMainGroup: Int
-    /*public let dateReceive: Bool
+    public let dateReceive: Bool
     public let timeReceive: Bool
     public let qtyWindSpeedReceive: Int
     public let nameWindSpeed1: String
@@ -44,10 +44,10 @@ public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
     public let stateRainReceive: Bool
     public let stateIceReceive: Bool
     public let stateHailReceive: Bool
-    public let dateAndTimeSend: Bool  */
+    public let dateAndTimeSend: Bool
     
-    public init(knxMainGroup: Int
-                /*dateReceive: Bool,
+    public init(knxMainGroup: Int,
+                dateReceive: Bool,
                 timeReceive: Bool,
                 qtyWindSpeedReceive: Int,
                 nameWindSpeed1: String,
@@ -81,12 +81,12 @@ public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
                 stateRainReceive: Bool,
                 stateIceReceive: Bool,
                 stateHailReceive: Bool,
-                dateAndTimeSend: Bool */
+                dateAndTimeSend: Bool
     )
     
     {
         self.knxMainGroup = knxMainGroup
-        /*self.dateReceive = dateReceive
+        self.dateReceive = dateReceive
         self.timeReceive = timeReceive
         self.qtyWindSpeedReceive = qtyWindSpeedReceive
         self.nameWindSpeed1 = nameWindSpeed1
@@ -120,7 +120,7 @@ public struct VcHeaderDataRequestDTO: Codable, @unchecked Sendable {
         self.stateRainReceive = stateRainReceive
         self.stateIceReceive = stateIceReceive
         self.stateHailReceive = stateHailReceive
-        self.dateAndTimeSend = dateAndTimeSend */
+        self.dateAndTimeSend = dateAndTimeSend
     }
     
 }
