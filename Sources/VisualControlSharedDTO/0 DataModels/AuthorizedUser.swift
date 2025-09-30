@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AuthorizedUser {
+public struct AuthorizedUser: Codable, @unchecked Sendable {
     
     public let authUsereName: String
     
