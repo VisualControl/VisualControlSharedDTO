@@ -11,11 +11,11 @@ public struct VcConfigRequestDTO: Codable, @unchecked Sendable {
     
     public let projectName: String
     public let creatingDate: String
-    public let userIds: [String]
+    public let authorizedUsers: [String]
     
-    public init(projectName: String, creatingDate: String, userIds: [String]) {
+    public init(projectName: String, creatingDate: String, authorizedUsers: [String]) {
         self.projectName = projectName
         self.creatingDate = creatingDate
-        self.userIds = userIds
+        self.authorizedUsers = authorizedUsers
     }
 }
