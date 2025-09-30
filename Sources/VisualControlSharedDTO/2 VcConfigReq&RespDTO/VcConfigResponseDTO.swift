@@ -12,13 +12,13 @@ public struct VcConfigResponseDTO: Codable, @unchecked Sendable {
     public let id: UUID
     public let projectName: String
     public let creatingDate: String
-    public let authorizedUsers: [AuthorizedUser]
+    public let authorizedUsers: [String]
     public let headerData: [VcHeaderDataResponseDTO]
     
     public init(id: UUID,
                 projectName: String,
                 creatingDate: String,
-                authorizedUsers: [AuthorizedUser],
+                authorizedUsers: [String],
                 headerData: [VcHeaderDataResponseDTO] = [])
     {
         self.id = id
