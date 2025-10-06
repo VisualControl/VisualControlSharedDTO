@@ -13,7 +13,7 @@ public struct VcFloorDataResponseDTO: Codable, @unchecked Sendable {
     public let sequenceNumber: Int
     public let floorNameVisu: String
     public let floorNameBaos: String
-    public let creatingDate: String
+    public let creatingDate: Date
     public let cleaningButtonsType: Int // Cleaning buttons for each floor (0-none, 1-Blinds, 2-Awnings)
     public let knxMainGroup: Int
     
@@ -21,7 +21,7 @@ public struct VcFloorDataResponseDTO: Codable, @unchecked Sendable {
          sequenceNumber: Int,
          floorNameVisu: String,
          floorNameBaos: String,
-         creatingDate: String,
+         creatingDate: Date,
          cleaningButtonsType: Int,
          knxMainGroup: Int)
     {
