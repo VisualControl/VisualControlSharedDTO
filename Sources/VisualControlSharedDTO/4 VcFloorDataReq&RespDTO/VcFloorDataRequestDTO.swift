@@ -16,7 +16,7 @@ public struct VcFloorDataRequestDTO: Codable, @unchecked Sendable {
     public let cleaningButtonsType: Int // Cleaning buttons for each floor (0-none, 1-Blinds, 2-Awnings)
     public let knxMainGroup: Int
     
-    init(sequenceNumber: Int,
+    public init(sequenceNumber: Int,
          floorNameVisu: String,
          floorNameBaos: String,
          creatingDate: String,
