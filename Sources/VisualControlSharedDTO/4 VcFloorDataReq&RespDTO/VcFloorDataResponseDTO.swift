@@ -16,14 +16,16 @@ public struct VcFloorDataResponseDTO: Codable, @unchecked Sendable {
     public let creatingDate: Date
     public let cleaningButtonsType: Int // Cleaning buttons for each floor (0-none, 1-Blinds, 2-Awnings)
     public let knxMainGroup: Int
+    public let authorizedUsers: [String]
     
     public init(id: UUID,
-         sequenceNumber: Int,
-         floorNameVisu: String,
-         floorNameBaos: String,
-         creatingDate: Date,
-         cleaningButtonsType: Int,
-         knxMainGroup: Int)
+                sequenceNumber: Int,
+                floorNameVisu: String,
+                floorNameBaos: String,
+                creatingDate: Date,
+                cleaningButtonsType: Int,
+                knxMainGroup: Int,
+                authorizedUsers: [String])
     {
         self.id = id
         self.sequenceNumber = sequenceNumber
@@ -32,6 +34,7 @@ public struct VcFloorDataResponseDTO: Codable, @unchecked Sendable {
         self.creatingDate = creatingDate
         self.cleaningButtonsType = cleaningButtonsType
         self.knxMainGroup = knxMainGroup
+        self.authorizedUsers = authorizedUsers
     }
     
 }
