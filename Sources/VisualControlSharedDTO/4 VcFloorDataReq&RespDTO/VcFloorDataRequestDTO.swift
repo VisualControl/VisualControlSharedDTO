@@ -9,12 +9,12 @@ import Foundation
 
 public struct VcFloorDataRequestDTO: Codable, @unchecked Sendable {
     
-    public var sequenceNumber: Int
-    public var floorNameVisu: String
-    public var floorNameBaos: String
-    public var creatingDate: String
-    public var cleaningButtonsType: Int // Cleaning buttons for each floor (0-none, 1-Blinds, 2-Awnings)
-    public var knxMainGroup: Int
+    public let sequenceNumber: Int
+    public let floorNameVisu: String
+    public let floorNameBaos: String
+    public let creatingDate: String
+    public let cleaningButtonsType: Int // Cleaning buttons for each floor (0-none, 1-Blinds, 2-Awnings)
+    public let knxMainGroup: Int
     
     init(sequenceNumber: Int,
          floorNameVisu: String,
