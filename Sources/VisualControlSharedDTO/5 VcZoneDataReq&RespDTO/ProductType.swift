@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ProductType: String, Codable {
+public enum ProductType: String, Codable, @unchecked Sendable {
     
     case Blind
     case Awning
