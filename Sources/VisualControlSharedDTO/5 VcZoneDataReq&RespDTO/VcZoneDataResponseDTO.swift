@@ -13,6 +13,7 @@ public struct VcZoneDataResponseDTO: Codable, @unchecked Sendable {
     public let sequenceNumber: Int
     public let zoneNameVisu: String
     public let zoneNameBaos: String
+    public let creatingDate: Date
     public let productType: ProductType
     public let authorizedUsers: [String]
     
@@ -20,6 +21,7 @@ public struct VcZoneDataResponseDTO: Codable, @unchecked Sendable {
                 sequenceNumber: Int,
                 zoneNameVisu: String,
                 zoneNameBaos: String,
+                creatingDate: Date,
                 productType: ProductType,
                 authorizedUsers: [String])
     {
@@ -27,6 +29,7 @@ public struct VcZoneDataResponseDTO: Codable, @unchecked Sendable {
         self.sequenceNumber = sequenceNumber
         self.zoneNameVisu = zoneNameVisu
         self.zoneNameBaos = zoneNameBaos
+        self.creatingDate = creatingDate
         self.productType = productType
         self.authorizedUsers = authorizedUsers
     }
