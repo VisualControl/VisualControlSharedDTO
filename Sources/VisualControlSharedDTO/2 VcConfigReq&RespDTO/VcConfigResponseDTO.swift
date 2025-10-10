@@ -11,16 +11,22 @@ public struct VcConfigResponseDTO: Codable, @unchecked Sendable {
     
     public let id: UUID
     public let projectName: String
+    public let sequenceNumber: Int
+    public let imageName: String
     public let creatingDate: Date
     public let authorizedUsers: [String]
     
     public init(id: UUID,
                 projectName: String,
+                sequenceNumber: Int,
+                imageName: String,
                 creatingDate: Date,
                 authorizedUsers: [String])
     {
         self.id = id
         self.projectName = projectName
+        self.sequenceNumber = sequenceNumber
+        self.imageName = imageName
         self.creatingDate = creatingDate
         self.authorizedUsers = authorizedUsers
     }
