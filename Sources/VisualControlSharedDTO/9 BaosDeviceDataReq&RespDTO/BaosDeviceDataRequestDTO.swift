@@ -9,11 +9,23 @@ import Foundation
 
 public struct BaosDeviceDataRequestDTO: Codable, @unchecked Sendable {
     
-    public let programmingMode: Bool
+    public let sequenceNumber: Int
+    public let ipAddress: String
+    public let deviceNameVc: String
+    public let creatingDate: Date
+    public let token: String
     
-    public init(programmingMode: Bool)
+    public init(sequenceNumber: Int,
+                ipAddress: String,
+                deviceNameVc: String,
+                creatingDate: Date,
+                token: String)
     {
-        self.programmingMode = programmingMode
-
+        self.sequenceNumber = sequenceNumber
+        self.ipAddress = ipAddress
+        self.deviceNameVc = deviceNameVc
+        self.creatingDate = creatingDate
+        self.token = token
     }
+    
 }
