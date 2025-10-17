@@ -15,20 +15,20 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
     public let deviceNameVc: String
     public let creatingDate: Date
     public let token: String
-    public let serialNumber: String
+    public let serialNumber: [UInt8]
     public let timeSinceReset: Int
     public let busConnectionState: Bool
     public let programmingMode: Bool
     public let indicationSending: Bool
-    public let physicalAddressKnx: String
-    public let macAddress: String
-    public let deviceFriendlyName: String
+    public let physicalAddressKnx: Int
+    public let macAddress: [UInt8]
+    public let deviceFriendlyName: [UInt8]
     public let maxDatapoints: Int
     public let configuredDatapoints: Int
-    public let ipAssignment: String
-    public let subnetMask: String
-    public let defaultGateway: String
-    public let systemTime: String
+    public let ipAssignment: Int
+    public let subnetMask: [UInt8]
+    public let defaultGateway: [UInt8]
+    public let systemTime: [UInt8]
     public let systemTimeOffset: Int
     
     public init(id: UUID,
@@ -37,20 +37,20 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
                 deviceNameVc: String,
                 creatingDate: Date,
                 token: String,
-                serialNumber: String,
+                serialNumber: [UInt8],
                 timeSinceReset: Int,
                 busConnectionState: Bool,
                 programmingMode: Bool,
                 indicationSending: Bool,
-                physicalAddressKnx: String,
-                macAddress: String,
-                deviceFriendlyName: String,
+                physicalAddressKnx: Int,
+                macAddress: [UInt8],
+                deviceFriendlyName: [UInt8],
                 maxDatapoints: Int,
                 configuredDatapoints: Int,
-                ipAssignment: String,
-                subnetMask: String,
-                defaultGateway: String,
-                systemTime: String,
+                ipAssignment: Int,
+                subnetMask: [UInt8],
+                defaultGateway: [UInt8],
+                systemTime: [UInt8],
                 systemTimeOffset: Int)
     {
         self.id = id
