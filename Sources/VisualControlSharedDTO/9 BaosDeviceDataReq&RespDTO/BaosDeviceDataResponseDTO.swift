@@ -15,20 +15,20 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
     public let deviceNameVc: String
     public let creatingDate: Date
     public let token: String
-    public let serialNumber: [UInt8]
+    public let serialNumber: [Int]
     public let timeSinceReset: Int
     public let busConnectionState: Bool
     public let programmingMode: Bool
     public let indicationSending: Bool
     public let physicalAddressKnx: Int
-    public let macAddress: [UInt8]
-    public let deviceFriendlyName: [UInt8]
+    public let macAddress: [Int]
+    public let deviceFriendlyName: [Int]
     public let maxDatapoints: Int
     public let configuredDatapoints: Int
     public let ipAssignment: Int
-    public let subnetMask: [UInt8]
+    public let subnetMask: [Int]
     public let defaultGateway: [Int]
-    public let systemTime: [UInt8]
+    public let systemTime: [Int]
     public let systemTimeOffset: Int
     
     public init(id: UUID,
@@ -37,20 +37,20 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
                 deviceNameVc: String,
                 creatingDate: Date,
                 token: String,
-                serialNumber: [UInt8],
+                serialNumber: [Int],
                 timeSinceReset: Int,
                 busConnectionState: Bool,
                 programmingMode: Bool,
                 indicationSending: Bool,
                 physicalAddressKnx: Int,
-                macAddress: [UInt8],
-                deviceFriendlyName: [UInt8],
+                macAddress: [Int],
+                deviceFriendlyName: [Int],
                 maxDatapoints: Int,
                 configuredDatapoints: Int,
                 ipAssignment: Int,
-                subnetMask: [UInt8],
+                subnetMask: [Int],
                 defaultGateway: [Int],
-                systemTime: [UInt8],
+                systemTime: [Int],
                 systemTimeOffset: Int)
     {
         self.id = id
