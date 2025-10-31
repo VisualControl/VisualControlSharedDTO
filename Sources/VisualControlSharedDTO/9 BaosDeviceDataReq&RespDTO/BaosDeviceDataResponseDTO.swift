@@ -27,7 +27,7 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
     public let configuredDatapoints: Int
     public let ipAssignment: Int
     public let subnetMask: [UInt8]
-    public let defaultGateway: [UInt8]
+    public let defaultGateway: [Int]
     public let systemTime: [UInt8]
     public let systemTimeOffset: Int
     
@@ -49,7 +49,7 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
                 configuredDatapoints: Int,
                 ipAssignment: Int,
                 subnetMask: [UInt8],
-                defaultGateway: [UInt8],
+                defaultGateway: [Int],
                 systemTime: [UInt8],
                 systemTimeOffset: Int)
     {
