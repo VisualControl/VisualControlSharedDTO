@@ -7,15 +7,19 @@
 
 import Foundation
 
-public struct BaosDatapointRawValuesResponseDTO: Codable, @unchecked Sendable {
+public struct BaosDatapointRawValueResponseDTO: Codable, @unchecked Sendable {
     
     public let baosDpId: Int
     public let baosDpName: String
     public let rawValue: [Int]
+    public let isUpdated: Bool
+    public let isValid: Bool
     
-    init(baosDpId: Int, baosDpName: String, rawValue: [Int]) {
+    public init(baosDpId: Int, baosDpName: String, rawValue: [Int], isUpdated: Bool, isValid: Bool) {
         self.baosDpId = baosDpId
         self.baosDpName = baosDpName
         self.rawValue = rawValue
+        self.isUpdated = isUpdated
+        self.isValid = isValid
     }
 }
