@@ -12,17 +12,20 @@ public struct BaosDeviceDataRequestDTO: Codable, @unchecked Sendable {
     public let sequenceNumber: Int
     public let ipAddress: String
     public let deviceNameVc: String
-    public let token: String
+    public let username: String
+    public let password: String
     
     public init(sequenceNumber: Int,
                 ipAddress: String,
                 deviceNameVc: String,
-                token: String)
+                username: String,
+                password: String)
     {
         self.sequenceNumber = sequenceNumber
         self.ipAddress = ipAddress
         self.deviceNameVc = deviceNameVc
-        self.token = token
+        self.username = username
+        self.password = password
     }
     
 }

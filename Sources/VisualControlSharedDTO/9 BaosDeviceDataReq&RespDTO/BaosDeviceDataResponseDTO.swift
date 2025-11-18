@@ -14,7 +14,8 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
     public let ipAddress: String
     public let deviceNameVc: String
     public let creatingDate: Date
-    public let token: String
+    public let username: String
+    public let password: String
     public let serialNumber: [Int]
     public let timeSinceReset: Int
     public let busConnectionState: Bool
@@ -36,7 +37,8 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
                 ipAddress: String,
                 deviceNameVc: String,
                 creatingDate: Date,
-                token: String,
+                username: String,
+                password: String,
                 serialNumber: [Int],
                 timeSinceReset: Int,
                 busConnectionState: Bool,
@@ -58,7 +60,8 @@ public struct BaosDeviceDataResponseDTO: Codable, @unchecked Sendable {
         self.ipAddress = ipAddress
         self.deviceNameVc = deviceNameVc
         self.creatingDate = creatingDate
-        self.token = token
+        self.username = username
+        self.password = password
         self.serialNumber = serialNumber
         self.timeSinceReset = timeSinceReset
         self.busConnectionState = busConnectionState
