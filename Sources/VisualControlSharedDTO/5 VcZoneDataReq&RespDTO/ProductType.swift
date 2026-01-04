@@ -14,4 +14,5 @@ public enum ProductType: String, Codable, @unchecked Sendable {
     case Light
     case WellumicDirect
     case WellumicDirIndir
+    case none
 }
