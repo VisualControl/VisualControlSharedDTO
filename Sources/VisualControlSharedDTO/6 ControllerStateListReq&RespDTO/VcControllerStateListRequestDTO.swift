@@ -10,15 +10,15 @@ import Foundation
 public struct VcControllerStateListRequestDTO: Codable, @unchecked Sendable {
     
     public let controllerStateListName: String
-    public let controllerStateDescription: [String]
+    public let controllerStateDescriptions: [String]
     public let invalidControllerState: String
     
     public init(controllerStateListName: String,
-                controllerStateDescription: [String],
+                controllerStateDescriptions: [String],
                 invalidControllerState: String)
     {
         self.controllerStateListName = controllerStateListName
-        self.controllerStateDescription = controllerStateDescription
+        self.controllerStateDescriptions = controllerStateDescriptions
         self.invalidControllerState = invalidControllerState
     }
 }
