@@ -12,12 +12,12 @@ public struct VcControllerStateListRequestDTO: Codable, @unchecked Sendable {
     public let controllerStateListName: String
     public let controllerStateDescriptions: [String]
     public let invalidControllerState: String
-    public let userInterfaceLanguage: String
+    public let userInterfaceLanguage: UserInterfaceLanguage
     
     public init(controllerStateListName: String,
                 controllerStateDescriptions: [String],
                 invalidControllerState: String,
-                userInterfaceLanguage: String)
+                userInterfaceLanguage: UserInterfaceLanguage)
     {
         self.controllerStateListName = controllerStateListName
         self.controllerStateDescriptions = controllerStateDescriptions
