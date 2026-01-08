@@ -11,7 +11,7 @@ public struct BaosDeviceStateChangesResponseDTO: Codable, @unchecked Sendable {
     
     public let id: UUID
     public let timeStamp: Date
-    public let stateDescription: String
+    public var stateDescription: String
     public let stateNumber: Int
     
     public init(id: UUID, timeStamp: Date, stateDescription: String, stateNumber: Int) {
