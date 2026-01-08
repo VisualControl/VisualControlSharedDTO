@@ -9,7 +9,6 @@ import Foundation
 
 public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     
-    public let currentDateAndTimeFromKNX: Date
     public let currentWindSpeed1: Float
     public let currentWindSpeed2: Float
     public let currentWindSpeed3: Float
@@ -38,9 +37,10 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     public let currentRainState: Bool
     public let currentIceState: Bool
     public let currentHailState: Bool
+    public let currentTime: Date
+    public let currentDate: Date
     
-    public init(currentDateAndTimeFromKNX: Date,
-                currentWindSpeed1: Float,
+    public init(currentWindSpeed1: Float,
                 currentWindSpeed2: Float,
                 currentWindSpeed3: Float,
                 currentWindSpeed4: Float,
@@ -67,9 +67,10 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
                 currentOutTemp: Float,
                 currentRainState: Bool,
                 currentIceState: Bool,
-                currentHailState: Bool)
+                currentHailState: Bool,
+                currentTime: Date,
+                currentDate: Date)
     {
-        self.currentDateAndTimeFromKNX = currentDateAndTimeFromKNX
         self.currentWindSpeed1 = currentWindSpeed1
         self.currentWindSpeed2 = currentWindSpeed2
         self.currentWindSpeed3 = currentWindSpeed3
@@ -98,5 +99,7 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
         self.currentRainState = currentRainState
         self.currentIceState = currentIceState
         self.currentHailState = currentHailState
+        self.currentTime = currentTime
+        self.currentDate = currentDate
     }
 }
