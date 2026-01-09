@@ -11,8 +11,8 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     
     public let currentWindSpeed1to4: [Float]
     public let currentWindDirection1to4: [Int]
-    public let currentBrightness1to8: [Int]
-    public let currentSolarEnergy1to8: [Int]
+    public let currentBrightness1to8: [Float]
+    public let currentSolarEnergy1to8: [Float]
     public let currentOutTemp: Float
     public let currentRainState: Bool
     public let currentIceState: Bool
@@ -22,8 +22,8 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     
     public init(currentWindSpeed1to4: [Float],
                 currentWindDirection1to4: [Int],
-                currentBrightness1to8: [Int],
-                currentSolarEnergy1to8: [Int],
+                currentBrightness1to8: [Float],
+                currentSolarEnergy1to8: [Float],
                 currentOutTemp: Float,
                 currentRainState: Bool,
                 currentIceState: Bool,
