@@ -23,10 +23,10 @@ public enum AutoChannelParameterType: String, Codable {
     case coolingSupportTempLimit
     case brightnessAutoOnOff
     case limitWindAlarm
-    case hyterresisWindAlarm
+    case hysteresisWindAlarm
     case offDelayWindAlarm
     case limitTempIce
-    case hyterresisTempIce
+    case hysteresisTempIce
     case stateIceAlarm
     case delayOnRain
     case delayOffRain
