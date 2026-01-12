@@ -30,4 +30,5 @@ public enum AutoChannelParameterType: String, Codable {
     case stateIceAlarm
     case delayOnRain
     case delayOffRain
+    case error
 }
