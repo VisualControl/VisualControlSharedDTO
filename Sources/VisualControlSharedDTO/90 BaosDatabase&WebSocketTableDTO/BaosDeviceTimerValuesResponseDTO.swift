@@ -9,6 +9,12 @@ import Foundation
 
 public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
     
+    public let timer1AutoOnOff: Timer1AutoOnOff
+    public let timer2AutoOnOff: Timer2AutoOnOff
+    public let timer1MovingUpDown: Timer1MovingUpDown
+    public let timer2MovingUpDown: Timer2MovingUpDown
+    
+    
     public struct Timer1AutoOnOff: Codable, @unchecked Sendable {
         public let hourAutoOnTimer1: Int
         public let minutesAutoOnTimer1: Int
@@ -79,5 +85,16 @@ public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
             self.hourMovingDownTimer2 = hourMovingDownTimer2
             self.minutesMovingDownTimer2 = minutesMovingDownTimer2
         }
+    }
+    
+    public init(timer1AutoOnOff: Timer1AutoOnOff,
+                timer2AutoOnOff: Timer2AutoOnOff,
+                timer1MovingUpDown: Timer1MovingUpDown,
+                timer2MovingUpDown: Timer2MovingUpDown)
+    {
+        self.timer1AutoOnOff = timer1AutoOnOff
+        self.timer2AutoOnOff = timer2AutoOnOff
+        self.timer1MovingUpDown = timer1MovingUpDown
+        self.timer2MovingUpDown = timer2MovingUpDown
     }
 }
