@@ -9,10 +9,10 @@ import Foundation
 
 public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
     
-    public let Timer1AutoOnOff: Timer1AutoOnOff
-    public let Timer2AutoOnOff: Timer2AutoOnOff
-    public let Timer1MovingUpDown: Timer1MovingUpDown
-    public let Timer2MovingUpDown: Timer2MovingUpDown
+    public let Timer11AutoOnOff: Timer1AutoOnOff
+    public let Timer12AutoOnOff: Timer2AutoOnOff
+    public let Timer21MovingUpDown: Timer1MovingUpDown
+    public let Timer22MovingUpDown: Timer2MovingUpDown
     
     
     public struct Timer1AutoOnOff: Codable, @unchecked Sendable {
@@ -92,9 +92,9 @@ public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
                 timer1MovingUpDown: Timer1MovingUpDown,
                 timer2MovingUpDown: Timer2MovingUpDown)
     {
-        self.Timer1AutoOnOff = timer1AutoOnOff
-        self.Timer2AutoOnOff = timer2AutoOnOff
-        self.Timer1MovingUpDown = timer1MovingUpDown
-        self.Timer2MovingUpDown = timer2MovingUpDown
+        self.Timer11AutoOnOff = timer1AutoOnOff
+        self.Timer12AutoOnOff = timer2AutoOnOff
+        self.Timer21MovingUpDown = timer1MovingUpDown
+        self.Timer22MovingUpDown = timer2MovingUpDown
     }
 }
