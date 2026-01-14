@@ -1,0 +1,43 @@
+//
+//  BaosDeviceAutoChannelFeedbackResponseDTO.swift
+//  VisualControlSharedDTO
+//
+//  Created by Systemintegration VisualControl on 14.01.26.
+//
+
+import Foundation
+
+public struct BaosDeviceAutoChannelFeedbackResponseDTO: Codable, @unchecked Sendable {
+    
+    public let currentStateAutoChannel: Int
+    public let currentStateAutoSwitch: Bool
+    public let currentStateAutoTimer: Bool
+    public let currentStateGlobalRadiation: Bool
+    public let currentStateSun: Bool
+    public let currentStateShadow: Bool
+    public let currentStateSmile: Bool
+    public let currentStateCloud: Bool
+    public let currentStateCoolingSupport: Bool
+    public let currentStateHeatingSupport: Bool
+    
+    public init(currentStateAutoChannel: Int,
+                currentStateAutoSwitch: Bool,
+                currentStateAutoTimer: Bool,
+                currentStateGlobalRadiation: Bool,
+                currentStateSun: Bool, currentStateShadow: Bool,
+                currentStateSmile: Bool, currentStateCloud: Bool,
+                currentStateCoolingSupport: Bool,
+                currentStateHeatingSupport: Bool)
+    {
+        self.currentStateAutoChannel = currentStateAutoChannel
+        self.currentStateAutoSwitch = currentStateAutoSwitch
+        self.currentStateAutoTimer = currentStateAutoTimer
+        self.currentStateGlobalRadiation = currentStateGlobalRadiation
+        self.currentStateSun = currentStateSun
+        self.currentStateShadow = currentStateShadow
+        self.currentStateSmile = currentStateSmile
+        self.currentStateCloud = currentStateCloud
+        self.currentStateCoolingSupport = currentStateCoolingSupport
+        self.currentStateHeatingSupport = currentStateHeatingSupport
+    }
+}
