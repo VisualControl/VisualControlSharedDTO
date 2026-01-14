@@ -9,7 +9,7 @@ import Foundation
 
 public struct BaosDeviceAutoChannelFeedbackResponseDTO: Codable, @unchecked Sendable {
     
-    public let currentStateAutoChannel: Int
+    public let currentStateAutoChannel: String
     public let currentStateAutoSwitch: Bool
     public let currentStateAutoTimer: Bool
     public let currentStateGlobalRadiation: Bool
@@ -20,7 +20,7 @@ public struct BaosDeviceAutoChannelFeedbackResponseDTO: Codable, @unchecked Send
     public let currentStateCoolingSupport: Bool
     public let currentStateHeatingSupport: Bool
     
-    public init(currentStateAutoChannel: Int,
+    public init(currentStateAutoChannel: String,
                 currentStateAutoSwitch: Bool,
                 currentStateAutoTimer: Bool,
                 currentStateGlobalRadiation: Bool,
