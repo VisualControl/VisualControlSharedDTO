@@ -22,14 +22,17 @@ public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
         public let saSuAuto: Bool
         public let hourAutoOff: Int
         public let minutesAutoOff: Int
+        public let currentState: Bool
         
-        public init(hourAutoOnTimer1: Int, minutesAutoOnTimer1: Int, moFrAutoTimer1: Bool, saSuAutoTimer1: Bool, hourAutoOffTimer1: Int, minutesAutoOffTimer1: Int) {
+        public init(hourAutoOnTimer1: Int, minutesAutoOnTimer1: Int, moFrAutoTimer1: Bool, saSuAutoTimer1: Bool, hourAutoOffTimer1: Int, minutesAutoOffTimer1: Int, currentState: Bool)
+        {
             self.hourAutoOn = hourAutoOnTimer1
             self.minutesAutoOn = minutesAutoOnTimer1
             self.moFrAuto = moFrAutoTimer1
             self.saSuAuto = saSuAutoTimer1
             self.hourAutoOff = hourAutoOffTimer1
             self.minutesAutoOff = minutesAutoOffTimer1
+            self.currentState = currentState
         }
     }
     
@@ -40,14 +43,16 @@ public struct BaosDeviceTimerValuesResponseDTO: Codable, @unchecked Sendable {
         public let saSuAuto: Bool
         public let hourAutoOff: Int
         public let minutesAutoOff: Int
+        public let currentState: Bool
         
-        public init(hourAutoOnTimer2: Int, minutesAutoOnTimer2: Int, moFrAutoTimer2: Bool, saSuAutoTimer2: Bool, hourAutoOffTimer2: Int, minutesAutoOffTimer2: Int) {
+        public init(hourAutoOnTimer2: Int, minutesAutoOnTimer2: Int, moFrAutoTimer2: Bool, saSuAutoTimer2: Bool, hourAutoOffTimer2: Int, minutesAutoOffTimer2: Int, currentState: Bool) {
             self.hourAutoOn = hourAutoOnTimer2
             self.minutesAutoOn = minutesAutoOnTimer2
             self.moFrAuto = moFrAutoTimer2
             self.saSuAuto = saSuAutoTimer2
             self.hourAutoOff = hourAutoOffTimer2
             self.minutesAutoOff = minutesAutoOffTimer2
+            self.currentState = currentState
         }
     }
     
