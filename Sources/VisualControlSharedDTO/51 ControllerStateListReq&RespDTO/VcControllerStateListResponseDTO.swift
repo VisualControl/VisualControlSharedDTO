@@ -17,7 +17,7 @@ public struct VcControllerStateListResponseDTO: Codable, @unchecked Sendable {
     public let minSlatAngle: Int
     public let maxSlatAngle: Int
     
-    init(id: UUID,
+    public init(id: UUID,
          controllerStateListName: String,
          controllerStateDescriptions: [String],
          invalidControllerState: String,
