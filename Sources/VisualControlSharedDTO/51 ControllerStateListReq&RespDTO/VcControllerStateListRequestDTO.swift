@@ -13,15 +13,21 @@ public struct VcControllerStateListRequestDTO: Codable, @unchecked Sendable {
     public let controllerStateDescriptions: [String]
     public let invalidControllerState: String
     public let userInterfaceLanguage: UserInterfaceLanguage
+    public let minSlatAngle: Int
+    public let maxSlatAngle: Int
     
     public init(controllerStateListName: String,
                 controllerStateDescriptions: [String],
                 invalidControllerState: String,
-                userInterfaceLanguage: UserInterfaceLanguage)
+                userInterfaceLanguage: UserInterfaceLanguage,
+                minSlatAngle: Int,
+                maxSlatAngle: Int)
     {
         self.controllerStateListName = controllerStateListName
         self.controllerStateDescriptions = controllerStateDescriptions
         self.invalidControllerState = invalidControllerState
         self.userInterfaceLanguage = userInterfaceLanguage
+        self.minSlatAngle = minSlatAngle
+        self.maxSlatAngle = maxSlatAngle
     }
 }
