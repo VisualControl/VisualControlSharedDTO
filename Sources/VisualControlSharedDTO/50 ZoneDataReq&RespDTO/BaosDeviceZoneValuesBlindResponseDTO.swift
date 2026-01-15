@@ -14,7 +14,7 @@ public struct BaosDeviceZoneValuesBlindResponseDTO: Codable, @unchecked Sendable
     public let currentBlindPosition: Int
     public let currentSlatPosition: Int
     
-    init(controllerState: Int, controllerStateDescription: String, currentBlindPosition: Int, currentSlatPosition: Int) {
+    public init(controllerState: Int, controllerStateDescription: String, currentBlindPosition: Int, currentSlatPosition: Int) {
         self.controllerState = controllerState
         self.controllerStateDescription = controllerStateDescription
         self.currentBlindPosition = currentBlindPosition

@@ -13,7 +13,7 @@ public struct BaosDeviceZoneValuesAwningResponseDTO: Codable, @unchecked Sendabl
     public let controllerStateDescription: String
     public let currentAwningPosition: Int
     
-    init(controllerState: Int, controllerStateDescription: String, currentAwningPosition: Int) {
+    public init(controllerState: Int, controllerStateDescription: String, currentAwningPosition: Int) {
         self.controllerState = controllerState
         self.controllerStateDescription = controllerStateDescription
         self.currentAwningPosition = currentAwningPosition
