@@ -10,7 +10,7 @@ import Foundation
 public struct BaosDeviceZoneValuesAwningResponseDTO: Codable, @unchecked Sendable {
     
     public let controllerState: Int
-    public let controllerStateDescription: String
+    public var controllerStateDescription: String
     public let currentAwningPosition: Int
     
     public init(controllerState: Int, controllerStateDescription: String, currentAwningPosition: Int) {

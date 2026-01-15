@@ -10,7 +10,7 @@ import Foundation
 public struct BaosDeviceZoneValuesBlindResponseDTO: Codable, @unchecked Sendable {
     
     public let controllerState: Int
-    public let controllerStateDescription: String
+    public var controllerStateDescription: String
     public let currentBlindPosition: Int
     public let currentSlatPosition: Int
     
