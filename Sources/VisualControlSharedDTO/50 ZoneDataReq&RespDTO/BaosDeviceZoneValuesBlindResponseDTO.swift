@@ -9,13 +9,23 @@ import Foundation
 
 public struct BaosDeviceZoneValuesBlindResponseDTO: Codable, @unchecked Sendable {
     
-    public let controllerState: Int
+    public let zoneNameVisualControl: String
+    public let zoneNameBaos: String
+    public let currentControllerState: Int
     public var controllerStateDescription: String
     public let currentBlindPosition: Int
     public let currentSlatAngle: Int
     
-    public init(controllerState: Int, controllerStateDescription: String, currentBlindPosition: Int, currentSlatAngle: Int) {
-        self.controllerState = controllerState
+    public init(zoneNameVisualControl: String,
+                zoneNameBaos: String,
+                currentControllerState: Int,
+                controllerStateDescription: String,
+                currentBlindPosition: Int,
+                currentSlatAngle: Int)
+    {
+        self.zoneNameVisualControl = zoneNameVisualControl
+        self.zoneNameBaos = zoneNameBaos
+        self.currentControllerState = currentControllerState
         self.controllerStateDescription = controllerStateDescription
         self.currentBlindPosition = currentBlindPosition
         self.currentSlatAngle = currentSlatAngle
