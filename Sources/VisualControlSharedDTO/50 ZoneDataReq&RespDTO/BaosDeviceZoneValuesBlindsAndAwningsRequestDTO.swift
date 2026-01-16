@@ -14,24 +14,39 @@ public struct BaosDeviceZoneValuesBlindsAndAwningsRequestDTO: Codable, @unchecke
     
     public struct BlindRequestData: Codable, @unchecked Sendable {
         public let zoneNameBaos: String
-        public let blindId: UUID
+        public let baosDeviceValueId_FbStateBld: UUID
+        public let baosDeviceValueId_FbPosBld: UUID
+        public let baosDeviceValueId_FbAngleBld: UUID
         public let controllerStateListId: UUID?
         
-        public init(zoneNameBaos: String, blindId: UUID, controllerStateListId: UUID?) {
+        public init(zoneNameBaos: String,
+                    baosDeviceValueId_FbStateBld: UUID,
+                    baosDeviceValueId_FbPosBld: UUID,
+                    baosDeviceValueId_FbAngleBld: UUID,
+                    controllerStateListId: UUID?)
+        {
             self.zoneNameBaos = zoneNameBaos
-            self.blindId = blindId
+            self.baosDeviceValueId_FbStateBld = baosDeviceValueId_FbStateBld
+            self.baosDeviceValueId_FbPosBld = baosDeviceValueId_FbPosBld
+            self.baosDeviceValueId_FbAngleBld = baosDeviceValueId_FbAngleBld
             self.controllerStateListId = controllerStateListId
         }
     }
     
     public struct AwningRequestData: Codable, @unchecked Sendable {
         public let zoneNameBaos: String
-        public let awningId: UUID
+        public let baosDeviceValueId_FbStateAwg: UUID
+        public let baosDeviceValueId_FbPosAwg: UUID
         public let controllerStateListId: UUID?
         
-        public init(zoneNameBaos: String, awningId: UUID, controllerStateListId: UUID?) {
+        public init(zoneNameBaos: String,
+                    baosDeviceValueId_FbStateAwg: UUID,
+                    baosDeviceValueId_FbPosAwg: UUID,
+                    controllerStateListId: UUID?)
+        {
             self.zoneNameBaos = zoneNameBaos
-            self.awningId = awningId
+            self.baosDeviceValueId_FbStateAwg = baosDeviceValueId_FbStateAwg
+            self.baosDeviceValueId_FbPosAwg = baosDeviceValueId_FbPosAwg
             self.controllerStateListId = controllerStateListId
         }
     }
