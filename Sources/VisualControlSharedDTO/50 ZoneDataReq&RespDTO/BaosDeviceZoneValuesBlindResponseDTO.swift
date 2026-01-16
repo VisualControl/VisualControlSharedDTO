@@ -14,9 +14,9 @@ public struct BaosDeviceZoneValuesBlindResponseDTO: Codable, @unchecked Sendable
     public var controllerStateDescription: String
     public let currentBlindPosition: Int
     public let currentSlatAngle: Int
-    public let controllerStateId: UUID
-    public let blindPositionId: UUID
-    public let slatAngleId: UUID
+    public let controllerStateId: UUID?
+    public let blindPositionId: UUID?
+    public let slatAngleId: UUID?
     
     public init(zoneNameBaos: String,
                 currentControllerState: Int,
