@@ -12,23 +12,23 @@ public struct BaosDeviceZoneValuesAwningResponseDTO: Codable, @unchecked Sendabl
     public let zoneNameBaos: String
     public let currentControllerState: Int
     public var controllerStateDescription: String
-    public let currentAwningPosition: Int
+    public let currentAwningLength: Int
     public let controllerStateId: UUID?
-    public let awningPositionId: UUID?
+    public let awningLengthId: UUID?
     
     public init(zoneNameBaos: String,
                 currentControllerState: Int,
                 controllerStateDescription: String,
-                currentAwningPosition: Int,
+                currentAwningLength: Int,
                 controllerStateId: UUID?,
-                awningPositionId: UUID?)
+                awningLengthId: UUID?)
     {
         self.zoneNameBaos = zoneNameBaos
         self.currentControllerState = currentControllerState
         self.controllerStateDescription = controllerStateDescription
-        self.currentAwningPosition = currentAwningPosition
+        self.currentAwningLength = currentAwningLength
         self.controllerStateId = controllerStateId
-        self.awningPositionId = awningPositionId
+        self.awningLengthId = awningLengthId
     }
     
 }
