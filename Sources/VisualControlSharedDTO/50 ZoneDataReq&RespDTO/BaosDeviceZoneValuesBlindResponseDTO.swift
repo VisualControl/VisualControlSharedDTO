@@ -23,9 +23,9 @@ public struct BaosDeviceZoneValuesBlindResponseDTO: Codable, @unchecked Sendable
                 controllerStateDescription: String,
                 currentBlindPosition: Int,
                 currentSlatAngle: Int,
-                controllerStateId: UUID,
-                blindPositionId: UUID,
-                slatAngleId: UUID)
+                controllerStateId: UUID?,
+                blindPositionId: UUID?,
+                slatAngleId: UUID?)
     {
         self.zoneNameBaos = zoneNameBaos
         self.currentControllerState = currentControllerState
