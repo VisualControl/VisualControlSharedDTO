@@ -9,19 +9,36 @@ import Foundation
 
 public struct BaosDeviceZoneValuesBlindsAndAwningsRequestDTO: Codable, @unchecked Sendable {
     
-    public let blindIds: [UUID]
-    public let controllerStateListIdsBlinds: [UUID]?
-    public let awningIds: [UUID]
-    public let controllerStateListIdsAwnings: [UUID]?
+    public let BlindsRequestData: [BlindRequestData]
+    public let AwningsRequestData: [AwningRequestData]
     
-    public init(blindIds: [UUID],
-                controllerStateListIdsBlinds: [UUID]?,
-                awningIds: [UUID],
-                controllerStateListIdsAwnings: [UUID]?)
-    {
-        self.blindIds = blindIds
-        self.controllerStateListIdsBlinds = controllerStateListIdsBlinds
-        self.awningIds = awningIds
-        self.controllerStateListIdsAwnings = controllerStateListIdsAwnings
+    public struct BlindRequestData: Codable, @unchecked Sendable {
+        public let zoneNameBaos: String
+        public let blindId: UUID
+        public let controllerStateListId: UUID?
+        
+        public init(zoneNameBaos: String, blindId: UUID, controllerStateListId: UUID?) {
+            self.zoneNameBaos = zoneNameBaos
+            self.blindId = blindId
+            self.controllerStateListId = controllerStateListId
+        }
     }
+    
+    public struct AwningRequestData: Codable, @unchecked Sendable {
+        public let zoneNameBaos: String
+        public let awningId: UUID
+        public let controllerStateListId: UUID?
+        
+        public init(zoneNameBaos: String, awningId: UUID, controllerStateListId: UUID?) {
+            self.zoneNameBaos = zoneNameBaos
+            self.awningId = awningId
+            self.controllerStateListId = controllerStateListId
+        }
+    }
+    
+    public init(blindsRequestData: [BlindRequestData], awningsRequestData: [AwningRequestData]) {
+        self.BlindsRequestData = blindsRequestData
+        self.AwningsRequestData = awningsRequestData
+    }
+    
 }
