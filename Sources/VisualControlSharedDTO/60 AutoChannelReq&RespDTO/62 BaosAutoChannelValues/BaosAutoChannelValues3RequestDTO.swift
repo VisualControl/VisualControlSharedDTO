@@ -10,7 +10,6 @@ import Foundation
 public struct BaosAutoChannelValues3RequestDTO: Codable, @unchecked Sendable {
     
     // SV.Wind/I/R
-    public let baosDeviceDataId: UUID
     public let limitWindAlarm: Int
     public let hysteresisWindAlarm: Int
     public let offDelayWindAlarm: Int
@@ -20,8 +19,7 @@ public struct BaosAutoChannelValues3RequestDTO: Codable, @unchecked Sendable {
     public let delayOnRain: Int
     public let delayOffRain: Int
     
-    public init(baosDeviceDataId: UUID,
-                limitWindAlarm: Int,
+    public init(limitWindAlarm: Int,
                 hysteresisWindAlarm: Int,
                 offDelayWindAlarm: Int,
                 limitTempIce: Int,
@@ -30,7 +28,6 @@ public struct BaosAutoChannelValues3RequestDTO: Codable, @unchecked Sendable {
                 delayOnRain: Int,
                 delayOffRain: Int)
     {
-        self.baosDeviceDataId = baosDeviceDataId
         self.limitWindAlarm = limitWindAlarm
         self.hysteresisWindAlarm = hysteresisWindAlarm
         self.offDelayWindAlarm = offDelayWindAlarm
