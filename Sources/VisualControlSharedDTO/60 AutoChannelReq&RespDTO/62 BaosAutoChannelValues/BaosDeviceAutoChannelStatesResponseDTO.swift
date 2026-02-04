@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BaosDeviceAutoChannelFeedbackResponseDTO: Codable, @unchecked Sendable {
+public struct BaosDeviceAutoChannelStatesResponseDTO: Codable, @unchecked Sendable {
     
     public let currentStateAutoChannelEnglish: String
     public let currentStateAutoChannelGerman: String

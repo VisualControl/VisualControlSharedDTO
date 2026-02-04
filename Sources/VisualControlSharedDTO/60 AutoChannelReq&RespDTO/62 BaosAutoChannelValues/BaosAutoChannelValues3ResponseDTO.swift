@@ -9,7 +9,7 @@ import Foundation
 
 public struct BaosAutoChannelValues3ResponseDTO: Codable, @unchecked Sendable {
     
-    // GV.Wind/I/R
+    // GV.Wind/I/R._ or SV.Wind/I/R._
     public let baosDeviceValuesId: UUID
     public let limitWindAlarm: Int
     public let hysteresisWindAlarm: Int

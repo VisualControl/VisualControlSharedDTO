@@ -9,7 +9,7 @@ import Foundation
 
 public struct BaosAutoChannelValues1ResponseDTO: Codable, @unchecked Sendable {
     
-    // GV.AutoParam
+    // SV.AutoParam._ or GV.AutoParam._
     public let baosDeviceValuesId: UUID
     public let limitSun: Int
     public let limitSmile: Int
