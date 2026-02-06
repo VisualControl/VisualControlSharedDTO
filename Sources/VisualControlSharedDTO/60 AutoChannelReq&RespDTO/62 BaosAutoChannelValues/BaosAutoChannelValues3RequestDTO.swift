@@ -37,5 +37,4 @@ public struct BaosAutoChannelValues3RequestDTO: Codable, @unchecked Sendable {
         self.delayOnRain = delayOnRain
         self.delayOffRain = delayOffRain
     }
-    
 }

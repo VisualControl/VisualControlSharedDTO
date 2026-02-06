@@ -9,8 +9,9 @@ import Foundation
 
 public struct BaosAutoChannelValues1ResponseDTO: Codable, @unchecked Sendable {
     
-    // SV.AutoParam._ or GV.AutoParam._
+    // GV.AutoParam._
     public let baosDeviceValuesId: UUID
+    public let autoChannelNameBaos: String
     public let limitSun: Int
     public let limitSmile: Int
     public let limitCloud: Int
@@ -19,6 +20,7 @@ public struct BaosAutoChannelValues1ResponseDTO: Codable, @unchecked Sendable {
     public let delayCloud: Int
     
     public init(baosDeviceValuesId: UUID,
+                autoChannelNameBaos: String,
                 limitSun: Int,
                 limitSmile: Int,
                 limitCloud: Int,
@@ -27,6 +29,7 @@ public struct BaosAutoChannelValues1ResponseDTO: Codable, @unchecked Sendable {
                 delayCloud: Int)
     {
         self.baosDeviceValuesId = baosDeviceValuesId
+        self.autoChannelNameBaos = autoChannelNameBaos
         self.limitSun = limitSun
         self.limitSmile = limitSmile
         self.limitCloud = limitCloud
@@ -34,5 +37,4 @@ public struct BaosAutoChannelValues1ResponseDTO: Codable, @unchecked Sendable {
         self.delaySmile = delaySmile
         self.delayCloud = delayCloud
     }
-    
 }

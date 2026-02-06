@@ -37,5 +37,4 @@ public struct BaosAutoChannelValues2RequestDTO: Codable, @unchecked Sendable {
         self.coolingSupportTempLimit = coolingSupportTempLimit
         self.brightnessAutoOnOff = brightnessAutoOnOff
     }
-    
 }

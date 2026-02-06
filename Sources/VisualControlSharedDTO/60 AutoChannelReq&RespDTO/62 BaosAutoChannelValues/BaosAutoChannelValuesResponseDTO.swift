@@ -1,5 +1,5 @@
 //
-//  BaosDeviceAutoChannelValuesResponseDTO.swift
+//  BaosAutoChannelValuesResponseDTO.swift
 //  VisualControlSharedDTO
 //
 //  Created by Systemintegration VisualControl on 13.01.26.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BaosDeviceAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
+public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
     
     // GV.AutoParam
     public let limitSun: Int

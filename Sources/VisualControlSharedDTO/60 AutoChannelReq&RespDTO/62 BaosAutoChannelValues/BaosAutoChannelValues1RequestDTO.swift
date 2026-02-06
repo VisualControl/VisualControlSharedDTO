@@ -31,5 +31,4 @@ public struct BaosAutoChannelValues1RequestDTO: Codable, @unchecked Sendable {
         self.delaySmile = delaySmile
         self.delayCloud = delayCloud
     }
-    
 }

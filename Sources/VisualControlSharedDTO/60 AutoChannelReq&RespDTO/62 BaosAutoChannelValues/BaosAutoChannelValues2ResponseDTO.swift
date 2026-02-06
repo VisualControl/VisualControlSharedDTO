@@ -9,8 +9,9 @@ import Foundation
 
 public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
     
-    // SV.Temp/H/C._ or // GV.Temp/H/C._
+    // GV.Temp/H/C._
     public let baosDeviceValuesId: UUID // UUID of the Datapoint GV.Temp/H/C... or SV.Temp/H/C
+    public let autoChannelNameBaos: String
     public let tempAutoOnOff: Bool
     public let tempAutoLimitOn: Int
     public let tempAutoLimitOff: Int
@@ -21,6 +22,7 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
     public let brightnessAutoOnOff: Bool
     
     public init(baosDeviceValuesId: UUID,
+                autoChannelNameBaos: String,
                 tempAutoOnOff: Bool,
                 tempAutoLimitOn: Int,
                 tempAutoLimitOff: Int,
@@ -31,6 +33,7 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
                 brightnessAutoOnOff: Bool)
     {
         self.baosDeviceValuesId = baosDeviceValuesId
+        self.autoChannelNameBaos = autoChannelNameBaos
         self.tempAutoOnOff = tempAutoOnOff
         self.tempAutoLimitOn = tempAutoLimitOn
         self.tempAutoLimitOff = tempAutoLimitOff
@@ -40,5 +43,4 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
         self.coolingSupportTempLimit = coolingSupportTempLimit
         self.brightnessAutoOnOff = brightnessAutoOnOff
     }
-    
 }
