@@ -25,7 +25,7 @@ public struct BaosTimerValuesCollectionResponseDTO: Codable, @unchecked Sendable
         public let saturdayAndSunday: Bool
         public let hourRightSide: Int
         public let minutesRightSide: Int
-        public var currentStateTimer: Bool
+        public let currentStateTimer: Bool
         
         public init(baosDeviceValuesId: UUID?,
                     baosDpName: String,
