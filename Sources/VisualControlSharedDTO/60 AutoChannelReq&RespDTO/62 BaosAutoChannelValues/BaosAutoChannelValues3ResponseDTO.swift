@@ -11,7 +11,7 @@ public struct BaosAutoChannelValues3ResponseDTO: Codable, @unchecked Sendable {
     
     // GV.Wind/I/R._
     public let baosDeviceValuesId: UUID
-    public let autoChannelNameBaos: String
+    public let baosDpName: String
     public let limitWindAlarm: Int
     public let hysteresisWindAlarm: Int
     public let offDelayWindAlarm: Int
@@ -22,7 +22,7 @@ public struct BaosAutoChannelValues3ResponseDTO: Codable, @unchecked Sendable {
     public let delayOffRain: Int
     
     public init(baosDeviceValuesId: UUID,
-                autoChannelNameBaos: String,
+                baosDpName: String,
                 limitWindAlarm: Int,
                 hysteresisWindAlarm: Int,
                 offDelayWindAlarm: Int,
@@ -33,7 +33,7 @@ public struct BaosAutoChannelValues3ResponseDTO: Codable, @unchecked Sendable {
                 delayOffRain: Int)
     {
         self.baosDeviceValuesId = baosDeviceValuesId
-        self.autoChannelNameBaos = autoChannelNameBaos
+        self.baosDpName = baosDpName
         self.limitWindAlarm = limitWindAlarm
         self.hysteresisWindAlarm = hysteresisWindAlarm
         self.offDelayWindAlarm = offDelayWindAlarm

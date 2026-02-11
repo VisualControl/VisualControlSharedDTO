@@ -11,7 +11,7 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
     
     // GV.Temp/H/C._
     public let baosDeviceValuesId: UUID // UUID of the Datapoint GV.Temp/H/C... or SV.Temp/H/C
-    public let autoChannelNameBaos: String
+    public let baosDpName: String
     public let tempAutoOnOff: Bool
     public let tempAutoLimitOn: Int
     public let tempAutoLimitOff: Int
@@ -22,7 +22,7 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
     public let brightnessAutoOnOff: Bool
     
     public init(baosDeviceValuesId: UUID,
-                autoChannelNameBaos: String,
+                baosDpName: String,
                 tempAutoOnOff: Bool,
                 tempAutoLimitOn: Int,
                 tempAutoLimitOff: Int,
@@ -33,7 +33,7 @@ public struct BaosAutoChannelValues2ResponseDTO: Codable, @unchecked Sendable {
                 brightnessAutoOnOff: Bool)
     {
         self.baosDeviceValuesId = baosDeviceValuesId
-        self.autoChannelNameBaos = autoChannelNameBaos
+        self.baosDpName = baosDpName
         self.tempAutoOnOff = tempAutoOnOff
         self.tempAutoLimitOn = tempAutoLimitOn
         self.tempAutoLimitOff = tempAutoLimitOff
