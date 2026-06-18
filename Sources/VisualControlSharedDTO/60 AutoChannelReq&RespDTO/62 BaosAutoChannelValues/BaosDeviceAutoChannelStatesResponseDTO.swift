@@ -20,6 +20,10 @@ public struct BaosDeviceAutoChannelStatesResponseDTO: Codable, @unchecked Sendab
     public let currentStateCloud: Bool
     public let currentStateCoolingSupport: Bool
     public let currentStateHeatingSupport: Bool
+    public let currentStateWindAlarm: Bool
+    public let currentStateRainAlarm: Bool
+    public let currentStateIceAlarm: Bool
+    public let currentStateHailAlarm: Bool
     
     public init(currentStateAutoChannelEnglish: String,
                 currentStateAutoChannelGerman: String,
@@ -29,7 +33,11 @@ public struct BaosDeviceAutoChannelStatesResponseDTO: Codable, @unchecked Sendab
                 currentStateSun: Bool, currentStateShadow: Bool,
                 currentStateSmile: Bool, currentStateCloud: Bool,
                 currentStateCoolingSupport: Bool,
-                currentStateHeatingSupport: Bool)
+                currentStateHeatingSupport: Bool,
+                currentStateWindAlarm: Bool,
+                currentStateRainAlarm: Bool,
+                currentStateIceAlarm: Bool,
+                currentStateHailAlarm: Bool)
     {
         self.currentStateAutoChannelEnglish = currentStateAutoChannelEnglish
         self.currentStateAutoChannelGerman = currentStateAutoChannelGerman
@@ -42,5 +50,9 @@ public struct BaosDeviceAutoChannelStatesResponseDTO: Codable, @unchecked Sendab
         self.currentStateCloud = currentStateCloud
         self.currentStateCoolingSupport = currentStateCoolingSupport
         self.currentStateHeatingSupport = currentStateHeatingSupport
+        self.currentStateWindAlarm = currentStateWindAlarm
+        self.currentStateRainAlarm = currentStateRainAlarm
+        self.currentStateIceAlarm = currentStateIceAlarm
+        self.currentStateHailAlarm = currentStateHailAlarm
     }
 }
