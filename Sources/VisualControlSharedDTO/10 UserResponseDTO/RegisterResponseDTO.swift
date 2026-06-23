@@ -10,7 +10,7 @@ import Foundation
 public struct RegisterResponseDTO: Codable, @unchecked Sendable {
     
     public let error: Bool
-    public let reason: String?
+    public var reason: String?
     public let id: UUID?
     public let username: String?
     
