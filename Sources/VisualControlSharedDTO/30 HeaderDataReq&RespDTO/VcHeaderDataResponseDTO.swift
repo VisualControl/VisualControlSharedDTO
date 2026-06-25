@@ -45,6 +45,7 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
     public let stateRainReceive: Bool
     public let stateIceReceive: Bool
     public let stateHailReceive: Bool
+    public let stateWindRecive: Bool
     public let dateAndTimeSend: Bool
     
     public init(id: UUID,
@@ -83,6 +84,7 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
                 stateRainReceive: Bool,
                 stateIceReceive: Bool,
                 stateHailReceive: Bool,
+                stateWindRecive: Bool,
                 dateAndTimeSend: Bool
     )
     
@@ -123,6 +125,7 @@ public struct VcHeaderDataResponseDTO: Codable, @unchecked Sendable {
         self.stateRainReceive = stateRainReceive
         self.stateIceReceive = stateIceReceive
         self.stateHailReceive = stateHailReceive
+        self.stateWindRecive = stateWindRecive
         self.dateAndTimeSend = dateAndTimeSend
     }
     

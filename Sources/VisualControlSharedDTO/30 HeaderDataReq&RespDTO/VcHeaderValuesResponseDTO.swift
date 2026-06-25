@@ -17,6 +17,7 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     public let currentRainState: Bool
     public let currentIceState: Bool
     public let currentHailState: Bool
+    public let currentWindState: Bool
     public let currentTime: Date
     public let currentDate: Date
     
@@ -28,6 +29,7 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
                 currentRainState: Bool,
                 currentIceState: Bool,
                 currentHailState: Bool,
+                currentWindState: Bool,
                 currentTime: Date,
                 currentDate: Date)
     {
@@ -39,6 +41,7 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
         self.currentRainState = currentRainState
         self.currentIceState = currentIceState
         self.currentHailState = currentHailState
+        self.currentWindState = currentWindState
         self.currentTime = currentTime
         self.currentDate = currentDate
     }
