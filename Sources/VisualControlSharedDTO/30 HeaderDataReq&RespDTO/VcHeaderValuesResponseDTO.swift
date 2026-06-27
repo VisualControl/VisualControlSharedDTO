@@ -42,8 +42,8 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
         self.currentIceState = currentIceState
         self.currentHailState = currentHailState
         self.currentWindState = currentWindState
-        self.currentTime = currentTime
-        self.currentDate = currentDate
+        self.currentTime = Date()
+        self.currentDate = Date()
     }
     
 }
