@@ -18,8 +18,8 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
     public let currentIceState: Bool
     public let currentHailState: Bool
     public let currentWindState: Bool
-    public let currentTime: Date
-    public let currentDate: Date
+//    public let currentTime: Date
+//    public let currentDate: Date
     
     public init(currentWindSpeed1to4: [Float],
                 currentWindDirection1to4: [Int],
@@ -29,9 +29,9 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
                 currentRainState: Bool,
                 currentIceState: Bool,
                 currentHailState: Bool,
-                currentWindState: Bool,
-                currentTime: Date,
-                currentDate: Date)
+                currentWindState: Bool)
+//                currentTime: Date,
+//                currentDate: Date)
     {
         self.currentWindSpeed1to4 = currentWindSpeed1to4
         self.currentWindDirection1to4 = currentWindDirection1to4
@@ -42,8 +42,8 @@ public struct VcHeaderValuesResponseDTO: Codable, @unchecked Sendable {
         self.currentIceState = currentIceState
         self.currentHailState = currentHailState
         self.currentWindState = currentWindState
-        self.currentTime = Date()
-        self.currentDate = Date()
+//        self.currentTime = Date()
+//        self.currentDate = Date()
     }
     
 }
