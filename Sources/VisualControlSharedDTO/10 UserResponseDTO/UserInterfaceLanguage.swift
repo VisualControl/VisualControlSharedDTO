@@ -9,7 +9,7 @@ import Foundation
 
 public enum UserInterfaceLanguage: String, Codable, @unchecked Sendable {
     
-    case English
-    case German
+    case english = "English"
+    case german = "German"
     
 }
