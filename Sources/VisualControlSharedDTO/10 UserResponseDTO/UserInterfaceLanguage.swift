@@ -7,10 +7,10 @@
 
 import Foundation
 
-public enum UserInterfaceLanguage: String, Identifiable, Codable, @unchecked Sendable {
+public enum UserInterfaceLanguage: String, Identifiable, CaseIterable, Codable, @unchecked Sendable {
     
-    public var id: UUID {
-        return UUID()
+    public var id: String {
+        rawValue
     }
 
     case english = "English"
