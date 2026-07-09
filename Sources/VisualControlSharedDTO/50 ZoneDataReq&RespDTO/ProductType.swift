@@ -7,12 +7,15 @@
 
 import Foundation
 
-public enum ProductType: String, Codable, @unchecked Sendable {
+public enum ProductType: String, Identifiable, CaseIterable, Codable, @unchecked Sendable {
     
-    case Blind
-    case Awning
-    case Light
-    case WellumicDirect
-    case WellumicDirIndir
-    case none
+    public var id: String {
+        rawValue
+    }
+    
+    case blind = "Blind"
+    case awning = "Awning"
+    case light = "Light"
+    case wellumicDirect = "Wellumic Direct"
+    case wellumicDirIndir = "Wellumic Direct and Indirect"
 }
