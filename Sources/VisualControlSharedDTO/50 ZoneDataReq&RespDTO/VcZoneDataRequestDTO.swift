@@ -13,15 +13,21 @@ public struct VcZoneDataRequestDTO: Codable, @unchecked Sendable {
     public let zoneNameBaos: String
     public let productType: ProductType
     public let authorizedUsers: [String]
+    public let controllerStateListId: UUID?
+    public let baosDeviceId: UUID?
     
     public init(zoneNameVisu: String,
                 zoneNameBaos: String,
                 productType: ProductType,
-                authorizedUsers: [String])
+                authorizedUsers: [String],
+                controllerStateListId: UUID?,
+                baosDeviceId: UUID?)
     {
         self.zoneNameVisu = zoneNameVisu
         self.zoneNameBaos = zoneNameBaos
         self.productType = productType
         self.authorizedUsers = authorizedUsers
+        self.controllerStateListId = controllerStateListId
+        self.baosDeviceId = baosDeviceId
     }
 }
