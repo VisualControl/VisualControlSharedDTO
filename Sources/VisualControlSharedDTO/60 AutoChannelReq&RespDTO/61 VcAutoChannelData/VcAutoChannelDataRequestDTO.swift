@@ -9,7 +9,7 @@ import Foundation
 
 public struct VcAutoChannelDataRequestDTO: Codable, @unchecked Sendable {
     
-    public let vcConfigId: UUID
+    public let vcConfigDataId: UUID
     public let autoChannelNameVisu: String
     public let autoChannelNameBaos: String
     public let choiceSun: Bool
@@ -27,7 +27,7 @@ public struct VcAutoChannelDataRequestDTO: Codable, @unchecked Sendable {
     public let knxMainGroup: Int
     public let authorizedUsers: [String]
 
-    public init(vcConfigId: UUID,
+    public init(vcConfigDataId: UUID,
                 autoChannelNameVisu: String,
                 autoChannelNameBaos: String,
                 choiceSun: Bool,
@@ -45,7 +45,7 @@ public struct VcAutoChannelDataRequestDTO: Codable, @unchecked Sendable {
                 knxMainGroup: Int,
                 authorizedUsers: [String])
     {
-        self.vcConfigId = vcConfigId
+        self.vcConfigDataId = vcConfigDataId
         self.autoChannelNameVisu = autoChannelNameVisu
         self.autoChannelNameBaos = autoChannelNameBaos
         self.choiceSun = choiceSun
