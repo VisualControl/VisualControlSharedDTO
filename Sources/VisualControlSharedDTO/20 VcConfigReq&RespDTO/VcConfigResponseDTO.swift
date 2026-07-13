@@ -15,13 +15,15 @@ public struct VcConfigResponseDTO: Codable, @unchecked Sendable {
     public let imageName: String
     public let creatingDate: Date
     public let authorizedUsers: [String]
+    public let userInterfaceLanguage: UserInterfaceLanguage
     
     public init(id: UUID,
                 projectName: String,
                 sequenceNumber: Int,
                 imageName: String,
                 creatingDate: Date,
-                authorizedUsers: [String])
+                authorizedUsers: [String],
+                userInterfaceLanguage: UserInterfaceLanguage)
     {
         self.id = id
         self.projectName = projectName
@@ -29,5 +31,6 @@ public struct VcConfigResponseDTO: Codable, @unchecked Sendable {
         self.imageName = imageName
         self.creatingDate = creatingDate
         self.authorizedUsers = authorizedUsers
+        self.userInterfaceLanguage = userInterfaceLanguage
     }
 }
