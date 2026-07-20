@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
+public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     
     case dpt01 = "DPT01"
     case dpt05 = "DPT05"
@@ -19,9 +19,9 @@ enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     case dpt13 = "DPT13"
     case dpt14 = "DPT14"
     
-    var id: ChartValueDptType { self }
+    public var id: ChartValueDptType { self }
     
-    var descriptionDataType: String {
+    public var descriptionDataType: String {
         
         switch self {
         case .dpt01: "Bool"
