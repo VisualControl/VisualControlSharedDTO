@@ -74,16 +74,25 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
             return Int(value)
             
         case .dpt09: // Float16
-            let bytes = generateByteArray(bytes: 2, from: byteArray)
-            let bits = bytes.withUnsafeBytes { rawPtr -> UInt16 in
-                let loaded = rawPtr.load(as: UInt16.self)
-                return UInt16(bigEndian: loaded)
+            let byteArray = generateByteArray(bytes: 2, from: byteArray)
+            let byte1 = UInt16(byteArray[0])
+            let byte2 = UInt16(byteArray[1])
+            let bitWord = byte2 | (byte1 << 8)
+            let floatValueIsNegative = bitWord & 32768 == 0 ? false : true
+            let bits1To11 = (bitWord & UInt16(2047))
+            var mantissa: UInt16 = 0
+            if floatValueIsNegative {
+                mantissa = (~(bits1To11 - 1) & UInt16(2047))
             }
-            var float: Float = 0
-            if #available(macOS 11.0, *) {
-                float = Float(Float16(bitPattern: bits))
+            else {
+                mantissa = bits1To11 & UInt16(2047)
             }
-            return Float(float)
+            let exponent = (bitWord & UInt16(30720)) >> 11
+            var result = Float32(0.01 * Float(mantissa) * Float(2^exponent))
+            if floatValueIsNegative {
+                result = -result
+            }
+            return Float(result)
             
         case .dpt12: // UInt32
             let bytes = generateByteArray(bytes: 4, from: byteArray)
