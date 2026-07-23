@@ -36,6 +36,20 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
         }
     }
     
+    public var dptTypeForBaos: String {
+        switch self {
+        case .dpt01: "DPT-1"
+        case .dpt05: "DPT-5"
+        case .dpt06: "DPT-6"
+        case .dpt07: "DPT-7"
+        case .dpt08: "DPT-8"
+        case .dpt09: "DPT-9"
+        case .dpt12: "DPT-12"
+        case .dpt13: "DPT-13"
+        case .dpt14: "DPT-14"
+        }
+    }
+    
     @available(macOS 10.15, *)
     public struct PickerForChartDataType: View {
         
