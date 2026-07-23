@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     
@@ -23,17 +24,38 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     
     public var dataTypeDescription: String {
         switch self {
-        case .dpt01: "Bool"
-        case .dpt05: "UInt8"
-        case .dpt06: "Int8"
-        case .dpt07: "UInt16"
-        case .dpt08: "Int16"
-        case .dpt09: "Float16"
-        case .dpt12: "UInt32"
-        case .dpt13: "Int32"
-        case .dpt14: "Float32"
+        case .dpt01: "DPT01 Bool"
+        case .dpt05: "DPT05 UInt8"
+        case .dpt06: "DPT06Int8"
+        case .dpt07: "DPT07 UInt16"
+        case .dpt08: "DPT08 Int16"
+        case .dpt09: "DPT09Float16"
+        case .dpt12: "DPT12 UInt32"
+        case .dpt13: "DPT13 Int32"
+        case .dpt14: "DPT14 Float32"
         }
     }
+    
+    @available(macOS 10.15, *)
+    public struct PickerForChartDataType: View {
+        
+        @Binding var selctedDptType: ChartValueDptType
+        
+        public var body: some View {
+            Picker("", selection: $selctedDptType) {
+                Text(dpt01.dataTypeDescription).tag(ChartValueDptType.dpt01)
+                Text(dpt05.dataTypeDescription).tag(ChartValueDptType.dpt05)
+                Text(dpt06.dataTypeDescription).tag(ChartValueDptType.dpt06)
+                Text(dpt07.dataTypeDescription).tag(ChartValueDptType.dpt07)
+                Text(dpt08.dataTypeDescription).tag(ChartValueDptType.dpt08)
+                Text(dpt09.dataTypeDescription).tag(ChartValueDptType.dpt09)
+                Text(dpt12.dataTypeDescription).tag(ChartValueDptType.dpt12)
+                Text(dpt13.dataTypeDescription).tag(ChartValueDptType.dpt13)
+                Text(dpt14.dataTypeDescription).tag(ChartValueDptType.dpt14)
+            }
+            .frame(width: 120, alignment: .leading)
+        }
+    } // end struct PickerForChartData: View
     
     public static func convertToRawValue(_ byteArray: [Int], type: ChartValueDptType) -> Any {
         switch type {
