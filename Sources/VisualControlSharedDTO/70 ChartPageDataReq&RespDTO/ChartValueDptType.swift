@@ -26,10 +26,10 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .dpt01: "DPT01 Bool"
         case .dpt05: "DPT05 UInt8"
-        case .dpt06: "DPT06Int8"
+        case .dpt06: "DPT06 Int8"
         case .dpt07: "DPT07 UInt16"
         case .dpt08: "DPT08 Int16"
-        case .dpt09: "DPT09Float16"
+        case .dpt09: "DPT09 Float16"
         case .dpt12: "DPT12 UInt32"
         case .dpt13: "DPT13 Int32"
         case .dpt14: "DPT14 Float32"
@@ -40,6 +40,10 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     public struct PickerForChartDataType: View {
         
         @Binding public var selctedDptType: ChartValueDptType
+        
+        public init(selctedDptType: Binding<ChartValueDptType>) {
+            self._selctedDptType = selctedDptType
+        }
         
         public var body: some View {
             Picker("", selection: $selctedDptType) {
