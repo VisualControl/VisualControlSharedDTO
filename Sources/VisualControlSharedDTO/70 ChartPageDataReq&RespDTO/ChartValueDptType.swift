@@ -39,7 +39,7 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     @available(macOS 10.15, *)
     public struct PickerForChartDataType: View {
         
-        @Binding var selctedDptType: ChartValueDptType
+        @Binding public var selctedDptType: ChartValueDptType
         
         public var body: some View {
             Picker("", selection: $selctedDptType) {
