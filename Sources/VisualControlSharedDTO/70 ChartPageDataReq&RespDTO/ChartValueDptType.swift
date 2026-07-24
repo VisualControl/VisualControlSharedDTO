@@ -71,7 +71,7 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
                 Text(dpt13.dataTypeDescription).tag(ChartValueDptType.dpt13)
                 Text(dpt14.dataTypeDescription).tag(ChartValueDptType.dpt14)
             }
-            .frame(width: 120, alignment: .leading)
+            .frame(width: 135, alignment: .leading)
         }
     } // end struct PickerForChartData: View
     
