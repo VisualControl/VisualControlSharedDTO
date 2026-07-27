@@ -13,18 +13,21 @@ public struct VcChartDatasetResponseDTO: Codable, @unchecked Sendable {
     public let chartNameVisu: String
     public let chartNameBaos: String
     public let chartValueDptType: String
+    public let chartType: String
     public let creatingDate: Date
     
     public init(id: UUID,
                 chartNameVisu: String,
                 chartNameBaos: String,
                 chartValueDptType: String,
+                chartType: String,
                 creatingDate: Date)
     {
         self.id = id
         self.chartNameVisu = chartNameVisu
         self.chartNameBaos = chartNameBaos
         self.chartValueDptType = chartValueDptType
+        self.chartType = chartType
         self.creatingDate = creatingDate
     }
 }

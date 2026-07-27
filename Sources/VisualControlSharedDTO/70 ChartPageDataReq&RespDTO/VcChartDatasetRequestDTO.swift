@@ -12,14 +12,17 @@ public struct VcChartDatasetRequestDTO: Codable, @unchecked Sendable {
     public let chartNameVisu: String
     public let chartNameBaos: String
     public let chartValueDptType: String
+    public let chartType: String
     
     public init(chartNameVisu: String,
                 chartNameBaos: String,
-                chartValueDptType: String)
+                chartValueDptType: String,
+                chartType: String)
     {
         self.chartNameVisu = chartNameVisu
         self.chartNameBaos = chartNameBaos
         self.chartValueDptType = chartValueDptType
+        self.chartType = chartType
     }
     
 }
