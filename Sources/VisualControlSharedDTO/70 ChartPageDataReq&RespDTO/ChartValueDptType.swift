@@ -53,26 +53,22 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
     @available(macOS 10.15, *)
     public struct PickerForChartDataType: View {
         
-        @Binding public var selctedDptType: ChartValueDptType
+        @Binding public var selectedDptType: ChartValueDptType
         
-        public init(selctedDptType: Binding<ChartValueDptType>) {
-            self._selctedDptType = selctedDptType
+        public init(selectedDptType: Binding<ChartValueDptType>) {
+            self._selectedDptType = selectedDptType
         }
         
         public var body: some View {
-            Picker("", selection: $selctedDptType) {
-                Text(dpt01.dataTypeDescription).tag(ChartValueDptType.dpt01)
-                Text(dpt05.dataTypeDescription).tag(ChartValueDptType.dpt05)
-                Text(dpt06.dataTypeDescription).tag(ChartValueDptType.dpt06)
-                Text(dpt07.dataTypeDescription).tag(ChartValueDptType.dpt07)
-                Text(dpt08.dataTypeDescription).tag(ChartValueDptType.dpt08)
-                Text(dpt09.dataTypeDescription).tag(ChartValueDptType.dpt09)
-                Text(dpt12.dataTypeDescription).tag(ChartValueDptType.dpt12)
-                Text(dpt13.dataTypeDescription).tag(ChartValueDptType.dpt13)
-                Text(dpt14.dataTypeDescription).tag(ChartValueDptType.dpt14)
+            
+            Picker("", selection: $selectedDptType) {
+                ForEach(ChartValueDptType.allCases) { dptType in
+                    Text(dptType.dataTypeDescription).tag(dptType.rawValue)
+                }
             }
             .frame(width: 135, alignment: .leading)
-        }
+            
+        } // end public var body: some View
     } // end struct PickerForChartData: View
     
     public static func convertToRawValue(_ byteArray: [Int], type: ChartValueDptType) -> Any {
