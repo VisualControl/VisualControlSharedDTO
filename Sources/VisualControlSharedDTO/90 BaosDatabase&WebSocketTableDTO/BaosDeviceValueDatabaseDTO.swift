@@ -14,7 +14,7 @@ public struct BaosDeviceValueDatabaseDTO: Codable, @unchecked Sendable {
     public let baosDpId: Int
     public let baosDpName: String
     public let zoneNameBaos: String
-    public let dptType: Int
+    public let dptType: String
     public let dpRawValue: [Int]
     public let communicationFlag: Bool
     public let readFlag: Bool
@@ -30,7 +30,7 @@ public struct BaosDeviceValueDatabaseDTO: Codable, @unchecked Sendable {
                 baosDpId: Int,
                 baosDpName: String,
                 zoneNameBaos: String,
-                dptType: Int,
+                dptType: String,
                 dpRawValue: [Int],
                 communicationFlag: Bool,
                 readFlag: Bool,
