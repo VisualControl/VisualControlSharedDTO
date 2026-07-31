@@ -1,13 +1,13 @@
 //
-//  EnumZoneDataPrefix.swift
+//  EnumZoneNameBaosPrefix.swift
 //  VisualControlSharedDTO
 //
 //  Created by Systemintegration VisualControl on 31.07.26.
 //
 
-public enum ZoneDataPrefix: String, Codable, CaseIterable, Identifiable {
+public enum ZoneNameBaosPrefix: String, Codable, CaseIterable, Identifiable {
     
-    public var id: ZoneDataPrefix { self }
+    public var id: ZoneNameBaosPrefix { self }
     
     case svContrBld = "SV.ContrBld."
     case svContrAwg = "SV.ContrAwg."
