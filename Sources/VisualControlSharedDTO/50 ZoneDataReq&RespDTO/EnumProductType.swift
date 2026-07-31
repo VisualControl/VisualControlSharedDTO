@@ -1,5 +1,5 @@
 //
-//  ProductType.swift
+//  EnumProductType.swift
 //  VisualControlSharedDTO
 //
 //  Created by Systemintegration VisualControl on 09.10.25.
