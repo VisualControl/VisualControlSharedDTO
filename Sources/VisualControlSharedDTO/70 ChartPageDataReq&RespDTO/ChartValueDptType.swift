@@ -50,6 +50,35 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
         }
     }
     
+    public var dptTypeAsInt: Int {
+        switch self {
+        case .dpt01: 1
+        case .dpt05: 5
+        case .dpt06: 6
+        case .dpt07: 7
+        case .dpt08: 8
+        case .dpt09: 9
+        case .dpt12: 12
+        case .dpt13: 13
+        case .dpt14: 14
+        }
+    }
+    
+    public func checkDptType(for value: String) -> ChartValueDptType? {
+        switch value {
+        case "DPT-1", "DPT1", "1", "DPT01"  : return .dpt01
+        case "DPT-5", "DPT5", "5", "DPT05"  : return .dpt05
+        case "DPT-6", "DPT6", "6", "DPT06"  : return .dpt06
+        case "DPT-7", "DPT7", "7", "DPT07"  : return .dpt07
+        case "DPT-8", "DPT8", "8", "DPT08"  : return .dpt08
+        case "DPT-9", "DPT9", "9", "DPT09"  : return .dpt09
+        case "DPT-12", "DPT12", "12"        : return .dpt12
+        case "DPT-13", "DPT13", "13"        : return .dpt13
+        case "DPT-14", "DPT14", "14"        : return .dpt14
+        default: return nil
+        }
+    } // end public func checkDptType
+    
     @available(macOS 10.15, *)
     public struct PickerForChartDataType: View {
         
