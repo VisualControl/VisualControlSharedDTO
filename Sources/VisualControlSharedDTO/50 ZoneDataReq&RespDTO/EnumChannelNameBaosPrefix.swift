@@ -69,4 +69,14 @@ public enum ChannelNameBaosPrefix: String, Codable, CaseIterable, Identifiable {
             return name
         }
     }
+    
+    
+    public static func getPrefix(from name: String) -> String {
+        if let match = allCases.first(where: { name.hasPrefix($0.rawValue) }) {
+            if name.count - match.rawValue.count > 0 {
+                return String(name.dropLast(name.count - match.rawValue.count))
+            }
+        }
+        return ""
+    }
 }
