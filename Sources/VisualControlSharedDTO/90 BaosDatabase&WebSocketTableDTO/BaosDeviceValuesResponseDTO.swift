@@ -12,19 +12,19 @@ public struct BaosDeviceValuesResponseDTO: Codable, @unchecked Sendable {
     public let id: UUID
     public let baosDpId: Int
     public let baosDpName: String
-    public let zoneNameBaos: String
+    public let channelNameBaos: String
     public let dptType: String
     
     public init(id: UUID,
                 baosDpId: Int,
                 baosDpName: String,
-                zoneNameBaos: String,
+                channelNameBaos: String,
                 dptType: String)
     {
         self.id = id
         self.baosDpId = baosDpId
         self.baosDpName = baosDpName
-        self.zoneNameBaos = zoneNameBaos
+        self.channelNameBaos = channelNameBaos
         self.dptType = dptType
     }
 }
