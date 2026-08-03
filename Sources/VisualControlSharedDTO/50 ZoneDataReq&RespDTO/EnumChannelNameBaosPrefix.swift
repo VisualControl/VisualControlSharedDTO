@@ -58,6 +58,7 @@ public enum ChannelNameBaosPrefix: String, Codable, CaseIterable, Identifiable {
     case gvWindIceRain = "GV.Wind/I/R."     // Get Value for Parameters Wind, Ice ans Rain
     case fbAllStates = "FB.AllStates."      // Feedback on the current status of all automatic functions
     case cv = "CV."                         // ChartValue
+    case mv = "MV."                         // Measured Value
     
     
     
