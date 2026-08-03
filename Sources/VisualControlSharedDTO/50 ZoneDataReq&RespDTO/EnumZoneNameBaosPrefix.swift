@@ -5,9 +5,9 @@
 //  Created by Systemintegration VisualControl on 31.07.26.
 //
 
-public enum ZoneNameBaosPrefix: String, Codable, CaseIterable, Identifiable {
+public enum ChannelNameBaosPrefix: String, Codable, CaseIterable, Identifiable {
     
-    public var id: ZoneNameBaosPrefix { self }
+    public var id: ChannelNameBaosPrefix { self }
     
     case svContrBld = "SV.ContrBld."        // SetValue Controller Blind
     case svContrAwg = "SV.ContrAwg."        // SetValue Controller Awning
