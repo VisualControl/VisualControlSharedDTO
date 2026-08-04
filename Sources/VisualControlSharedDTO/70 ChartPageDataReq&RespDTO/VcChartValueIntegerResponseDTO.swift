@@ -14,9 +14,9 @@ public struct VcChartValueIntegerResponseDTO: Codable, @unchecked Sendable {
     public let storedValue: Int
     public let storageTime: Date
     
-    public init(id: UUID, storedValue: Int, storageTime: Date) {
+    public init(id: UUID, storedValue: Int, storageTime: Date, dptType: ChartValueDptType) {
         self.id = id
-        self.chartValueDptType = .dpt01
+        self.chartValueDptType = dptType
         self.storedValue = storedValue
         self.storageTime = storageTime
     }
