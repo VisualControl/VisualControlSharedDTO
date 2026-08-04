@@ -140,6 +140,7 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
             
         case .dpt09: // Float16
             let byteArrayModified = generateByteArray(bytes: 2, from: byteArray)
+            print("Array: \(byteArrayModified)")
             let byte1 = UInt16(byteArrayModified[0])
             let byte2 = UInt16(byteArrayModified[1])
             let bitWord = byte2 | (byte1 << 8)
@@ -157,6 +158,7 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
             if floatValueIsNegative {
                 result = -result
             }
+            print("Float: \(result)")
             return Float(result)
             
         case .dpt12: // UInt32
