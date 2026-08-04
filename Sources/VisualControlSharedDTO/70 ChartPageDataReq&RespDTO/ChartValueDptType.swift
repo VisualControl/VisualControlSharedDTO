@@ -64,7 +64,7 @@ public enum ChartValueDptType: String, Codable, CaseIterable, Identifiable {
         }
     }
     
-    public func checkDptType(for value: String) -> ChartValueDptType? {
+    public static func checkDptType(for value: String) -> ChartValueDptType? {
         switch value {
         case "DPT-1", "DPT1", "1", "DPT01"  : return .dpt01
         case "DPT-5", "DPT5", "5", "DPT05"  : return .dpt05
