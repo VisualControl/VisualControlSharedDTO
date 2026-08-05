@@ -17,6 +17,24 @@ public enum ChartType: String, Codable, CaseIterable, Identifiable {
     
     public var id: ChartType { self }
     
+    public var startTimeFrame: Date {
+        
+        switch self {
+            
+        case .currentValue:
+            return Date()
+        case .oneDayDiagram:
+            return Date().addingTimeInterval(-86_400)
+            
+        case .sevenDaysDiagram:
+            return Date().addingTimeInterval(-604_800)
+            
+        case .thirtyDaysDiagram:
+            return Date().addingTimeInterval(-2_592_000)
+            
+        }
+    }
+    
     @available(macOS 10.15, *)
     public struct PickerForChartType: View {
         
