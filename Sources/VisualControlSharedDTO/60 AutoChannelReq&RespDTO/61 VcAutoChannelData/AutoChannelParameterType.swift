@@ -60,8 +60,7 @@ public enum AutoChannelParameterType: String, Codable {
         case .delayOffRain: "Switch-off delay for Precipitation"
         case .error: "Error (unknown)"
         }
-        
-    }
+    } // end public var englishParameterName
     
     
     public var germanParameterName: String {
@@ -91,7 +90,37 @@ public enum AutoChannelParameterType: String, Codable {
         case .delayOffRain: "Ausschaltverzögerung bei Niederschlag"
         case .error: "Unbekannter Fehler"
         }
+    } // end public var germanParameterName
+    
+    
+    public var baseUnits: String {
         
-    }
+        switch self {
+        case .limitSun: "klx"
+        case .limitSmile: "klx"
+        case .limitCloud: "klx"
+        case .delaySun: "s"
+        case .delaySmile: "s"
+        case .delayCloud: "s"
+        case .tempAutoOnOff: "°C"
+        case .tempAutoLimitOn: "°C"
+        case .tempAutoLimitOff: "°C"
+        case .heatingSupportOnOff:  ""
+        case .heatingSupportTempLimit: "°C"
+        case .coolingSupportOnOff: ""
+        case .coolingSupportTempLimit: "°C"
+        case .brightnessAutoOnOff: ""
+        case .limitWindAlarm: "m/s"
+        case .hysteresisWindAlarm: "m/s"
+        case .offDelayWindAlarm: "s"
+        case .limitTempIce: "°C"
+        case .hysteresisTempIce: "K"
+        case .stateIceAlarm: ""
+        case .delayOnRain: "s"
+        case .delayOffRain: "s"
+        case .error: ""
+        }
+        
+    } // end public var baseUnits
     
 }
