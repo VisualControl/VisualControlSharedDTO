@@ -18,6 +18,7 @@ public struct BaosAutoChannelValues2RequestDTO: Codable, @unchecked Sendable {
     public let coolingSupportOnOff: Bool
     public let coolingSupportTempLimit: Int
     public let brightnessAutoOnOff: Bool
+    public let currentStateTempAutoActive: Bool
     
     public init(tempAutoOnOff: Bool,
                 tempAutoLimitOn: Int,
@@ -26,7 +27,8 @@ public struct BaosAutoChannelValues2RequestDTO: Codable, @unchecked Sendable {
                 heatingSupportTempLimit: Int,
                 coolingSupportOnOff: Bool,
                 coolingSupportTempLimit: Int,
-                brightnessAutoOnOff: Bool)
+                brightnessAutoOnOff: Bool,
+                currentStateTempAutoActive: Bool)
     {
         self.tempAutoOnOff = tempAutoOnOff
         self.tempAutoLimitOn = tempAutoLimitOn
@@ -36,5 +38,6 @@ public struct BaosAutoChannelValues2RequestDTO: Codable, @unchecked Sendable {
         self.coolingSupportOnOff = coolingSupportOnOff
         self.coolingSupportTempLimit = coolingSupportTempLimit
         self.brightnessAutoOnOff = brightnessAutoOnOff
+        self.currentStateTempAutoActive = currentStateTempAutoActive
     }
 }
