@@ -10,6 +10,7 @@ import Foundation
 public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
     
     // GV.AutoParam
+    public let autoChannelValues1ID: UUID
     public let limitSun: Int
     public let limitSmile: Int
     public let limitCloud: Int
@@ -18,6 +19,7 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
     public let delayCloud: Int
     
     // GV.Temp/H/C
+    public let autoChannelValues2ID: UUID
     public let tempAutoOnOff: Bool
     public let tempAutoLimitOn: Int
     public let tempAutoLimitOff: Int
@@ -26,8 +28,10 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
     public let coolingSupportOnOff: Bool
     public let coolingSupportTempLimit: Int
     public let brightnessAutoOnOff: Bool
+    public let currentStateTempAutoActive: Bool
     
     // GV.Wind/I/R
+    public let autoChannelValues3ID: UUID
     public let limitWindAlarm: Int
     public let hysteresisWindAlarm: Int
     public let offDelayWindAlarm: Int
@@ -37,12 +41,14 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
     public let delayOnRain: Int
     public let delayOffRain: Int
     
-    public init(limitSun: Int,
+    public init(autoChannelValues1ID: UUID,
+                limitSun: Int,
                 limitSmile: Int,
                 limitCloud: Int,
                 delaySun: Int,
                 delaySmile: Int,
                 delayCloud: Int,
+                autoChannelValues2ID: UUID,
                 tempAutoOnOff: Bool,
                 tempAutoLimitOn: Int,
                 tempAutoLimitOff: Int,
@@ -51,6 +57,8 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
                 coolingSupportOnOff: Bool,
                 coolingSupportTempLimit: Int,
                 brightnessAutoOnOff: Bool,
+                currentStateTempAutoActive: Bool,
+                autoChannelValues3ID: UUID,
                 limitWindAlarm: Int,
                 hysteresisWindAlarm: Int,
                 offDelayWindAlarm: Int,
@@ -60,12 +68,14 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
                 delayOnRain: Int,
                 delayOffRain: Int)
     {
+        self.autoChannelValues1ID = autoChannelValues1ID
         self.limitSun = limitSun
         self.limitSmile = limitSmile
         self.limitCloud = limitCloud
         self.delaySun = delaySun
         self.delaySmile = delaySmile
         self.delayCloud = delayCloud
+        self.autoChannelValues2ID = autoChannelValues2ID
         self.tempAutoOnOff = tempAutoOnOff
         self.tempAutoLimitOn = tempAutoLimitOn
         self.tempAutoLimitOff = tempAutoLimitOff
@@ -74,6 +84,8 @@ public struct BaosAutoChannelValuesResponseDTO: Codable, @unchecked Sendable {
         self.coolingSupportOnOff = coolingSupportOnOff
         self.coolingSupportTempLimit = coolingSupportTempLimit
         self.brightnessAutoOnOff = brightnessAutoOnOff
+        self.currentStateTempAutoActive = currentStateTempAutoActive
+        self.autoChannelValues3ID = autoChannelValues3ID
         self.limitWindAlarm = limitWindAlarm
         self.hysteresisWindAlarm = hysteresisWindAlarm
         self.offDelayWindAlarm = offDelayWindAlarm
