@@ -18,4 +18,15 @@ public enum ProductType: String, Identifiable, CaseIterable, Codable, @unchecked
     case light = "Light"
     case wellumicDirect = "Wellumic Direct"
     case wellumicDirIndir = "Wellumic Direct and Indirect"
+    
+    var baosPrefixContrState: String {
+        
+        switch self {
+        case .blind: "FB.StateBld."
+        case .awning: "FB.StateAwg."
+        case .light: "FB.StateLgt."
+        case .wellumicDirect: "FB.StateWD."
+        case .wellumicDirIndir: "FB.StateWDI."
+        }
+    } // end var baosPrefixContrState
 }
