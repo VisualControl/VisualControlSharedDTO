@@ -9,11 +9,11 @@ import Foundation
 
 public struct BaosDeviceZoneCmdRequestDTO: Codable, @unchecked Sendable {
     
-    public let productType: ProductType
+    public let productType: String
     public let zoneNameBaos: String
     public let ctrlCmdNumber: Int
     
-    public init(_ productType: ProductType,
+    public init(_ productType: String,
                 _ zoneNameBaos: String,
                 _ ctrlCmdNumber: Int)
     {

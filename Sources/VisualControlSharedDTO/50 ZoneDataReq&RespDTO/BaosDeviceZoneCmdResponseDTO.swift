@@ -10,14 +10,14 @@ import Foundation
 public struct BaosDeviceZoneCmdResponseDTO: Codable, @unchecked Sendable {
     
     public let baosDeviceValuesId: UUID
-    public let productType: ProductType
+    public let productType: String
     public let zoneNameBaos: String
     public let ctrlCmdNumber: Int
     
-    public init(baosDeviceValuesId: UUID,
-                productType: ProductType,
-                zoneNameBaos: String,
-                ctrlCmdNumber: Int)
+    public init(_ baosDeviceValuesId: UUID,
+                _ productType: String,
+                _ zoneNameBaos: String,
+                _ ctrlCmdNumber: Int)
     {
         self.baosDeviceValuesId = baosDeviceValuesId
         self.productType = productType
