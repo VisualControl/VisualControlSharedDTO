@@ -29,4 +29,17 @@ public enum ProductType: String, Identifiable, CaseIterable, Codable, @unchecked
         case .wellumicDirIndir: "FB.StateWDI."
         }
     } // end var baosPrefixContrState
+    
+    public var baosPrefixContrCmd: String {
+        
+        switch self {
+        case .blind: "SV.ContrBld."
+        case .awning: "SV.ContrAwg."
+        case .light: "SV.ContrLgt."
+        case .wellumicDirect: "SV.ContrWD."
+        case .wellumicDirIndir: "SV.ContrWDI."
+        }
+    } // end var baosPrefixContrState
+    
+    
 }
